@@ -11,6 +11,14 @@ dt {
   padding: 0px;
 }
 
+html.textomaior {
+  font-size: 150%;
+}
+
+.azul {
+  background: firebrick;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -105,6 +113,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -187,6 +199,25 @@ body {
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
+}
+
+.js-tabcontent section {
+  display: none;
+}
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0, 0);
+  }
 }
 
 @media (max-width: 700px) {
