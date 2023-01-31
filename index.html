@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="js">
 
 <head>
   <meta charset="UTF-8">
@@ -11,19 +11,18 @@
 </head>
 
 <body>
-
-  <header class="menu">
+  <header class="menu js-menu">
     <nav>
       <ul>
-        <li><a href="#">animais</a></li>
-        <li><a href="#">fag</a></li>
-        <li><a href="#">contato</a></li>
-        <li><a href="#">dev →</a></li>
+        <li><a href="#animais">animais</a></li>
+        <li><a href="#Fag">fag</a></li>
+        <li><a href="#contato">contato</a></li>
+        <li><a href="#dev">dev →</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="grid-section">
+  <section class="grid-section js-scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
     <ul class="animais-lista js-tabmenu">
       <li><img src="./img/imagem1.jpg" alt="raposa"></li>
@@ -33,7 +32,8 @@
       <li><img src="./img/imagem5.jpg" alt="macaco"></li>
       <li><img src="./img/imagem6.jpg" alt="leão"></li>
     </ul>
-    <div class="animais-conteudo animais js-tabcontent">
+
+    <div class="animais-conteudo animais js-content">
       <section>
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
@@ -82,40 +82,42 @@
         </p>
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
+  </section>
+
+  </div>
+  <section class="grid-section fag js-accordion js-scroll" id="Fag">
+    <h1 class="titulo">FAG</h1>
+    <dl class="faq-lista">
+      <dt>Qual a idade dos animais?</dt>
+      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+      <dt>Eles são fantásticos?</dt>
+      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+      <dt>Qual a diferença?</dt>
+      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+      <dt>Como proteger?</dt>
+      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+    </dl>
+  </section>
+
+  <section class="grid-section contato js-scroll" id="contato">
+    <h1 class="titulo">Contato</h1>
+    <div class="mapa">
+      <img src="./img/mapa.png" alt="">
     </div>
-    <section class="grid-section fag">
-      <h1 class="titulo">FAG</h1>
-      <dl class="faq-lista">
-        <dt>Qual a idade dos animais?</dt>
-        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-        <dt>Eles são fantásticos?</dt>
-        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-        <dt>Qual a diferença?</dt>
-        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-        <dt>Como proteger?</dt>
-        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-      </dl>
-    </section>
-    <section class="grid-section contato">
-      <h1 class="titulo">Contato</h1>
-      <div class="mapa">
-        <img src="./img/mapa.png" alt="">
-      </div>
-      <div class="dados">
-        <ul>
-          <li><a href="mailto:contato@origamid.com">contato@origamid.com</a></li>
-          <li><a href="tel:++55 (21) 9999-9999"></a>+55 (21) 9999-9999</li>
-          <li>Rua do Conde, nº 21</li>
-          <li>Rio de Janeiro - RJ</li>
-        </ul>
-      </div>
-    </section>
+    <div class="dados">
+      <ul>
+        <li><a href="mailto:contato@origamid.com">contato@origamid.com</a></li>
+        <li><a href="tel:++55 (21) 9999-9999"></a>+55 (21) 9999-9999</li>
+        <li>Rua do Conde, nº 21</li>
+        <li>Rio de Janeiro - RJ</li>
+      </ul>
+    </div>
+  </section>
 
-    <footer class="copy">
-      <p>Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="./script.js"></script>
+  <footer class="copy">
+    <p>Todos os direitos reservados.</p>
+  </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

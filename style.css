@@ -11,13 +11,13 @@ dt {
   padding: 0px;
 }
 
-html.textomaior {
+/* html.textomaior {
   font-size: 150%;
 }
 
 .azul {
   background: firebrick;
-}
+} */
 
 img {
   display: block;
@@ -201,10 +201,10 @@ body {
   font-size: 1rem;
 }
 
-.js-tabcontent section {
+.js-content section {
   display: none;
 }
-.js-tabcontent section.ativo {
+.js-content section.ativo {
   display: block !important;
   animation: show 0.5s forwards;
 }
@@ -218,6 +218,39 @@ body {
     opacity: 1;
     transform: translate(0, 0, 0);
   }
+}
+
+.js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "⬇";
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: "⬆";
+}
+
+.js-accordion dd.ativo {
+  display: block;
+}
+
+@keyframes slidown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.js .js-scroll {
+  opacity: 0;
+}
+.js .js-scroll.ativo {
+  opacity: 1;
+  transition: 0.3s;
 }
 
 @media (max-width: 700px) {
@@ -259,4 +292,4 @@ body {
   .animais {
     margin-bottom: 10px;
   }
-} ;
+}

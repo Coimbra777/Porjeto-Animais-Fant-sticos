@@ -1,19 +1,92 @@
-const tabMenu = document.querySelectorAll(".js-tabmenu li");
-const tabContent = document.querySelectorAll(".js-tabcontent section");
-
-if (tabMenu && tabContent) {
+function initTabNav() {
+  const tabMenu = document.querySelectorAll(".js-tabmenu li");
+  const tabContent = document.querySelectorAll(".js-content section");
   tabContent[0].classList.add("ativo");
 
-  function activeTab(index) {
-    tabContent.forEach((section) => {
-      section.classList.remove("ativo");
-    });
-    tabContent[index].classList.add("ativo");
-  }
+  if (tabContent.length && tabMenu.length) {
+    function activeTab(index) {
+      tabContent.forEach((section) => {
+        section.classList.remove("ativo");
+      });
+      tabContent[index].classList.add("ativo");
+    }
 
-  tabMenu.forEach((itemMenu, index) => {
-    itemMenu.addEventListener("click", () => {
-      activeTab(index);
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener("click", function () {
+        activeTab(index);
+      });
     });
+  }
+}
+initTabNav();
+
+function initAccordion() {
+  const accordionList = document.querySelectorAll(".js-accordion dt");
+  if (accordionList.length) {
+    accordionList[0].nextElementSibling.classList.add("ativo");
+
+    function activeAccordion(event) {
+      this.classList.toggle("ativo");
+      console.log(this.nextElementSibling.classList.toggle("ativo"));
+    }
+
+    accordionList.forEach((item) => {
+      item.addEventListener("click", activeAccordion);
+    });
+  }
+}
+initAccordion();
+
+function initScrollSuave() {
+  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  // console.log(linksInternos);
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    // const topo = section.offsetTop;
+    // console.log(section);
+    section.scrollIntoView({
+      behavior: "smooth",
+      bolck: "start",
+    });
+    // FORMA ALTERNATIVA
+    // window.scrollTo({
+    //   top: topo,
+    //   behavior: "smooth",
+    // });
+  }
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
   });
 }
+initScrollSuave();
+
+function initAnimacaoScroll() {
+  const sections = document.querySelectorAll(".js-scroll");
+  // console.log(sections);
+
+  if (sections.length) {
+    const windowMetade = window.innerHeight * 0.4;
+
+    function animaScroll() {
+      // console.log("sim");
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top - windowMetade;
+        // console.log(sectionTop);
+        if (sectionTop < 352) {
+          // console.log("animar");
+          section.classList.add("ativo");
+        } else {
+          section.classList.remove("ativo");
+        }
+      });
+    }
+
+    animaScroll();
+
+    window.addEventListener("scroll", animaScroll);
+  }
+}
+initAnimacaoScroll();
