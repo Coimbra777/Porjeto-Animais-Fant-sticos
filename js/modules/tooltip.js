@@ -50,4 +50,4 @@ function criarTooltipBox(element) {
   document.body.appendChild(tooltipbox);
   return tooltipbox;
 }
-console.log(tooltips);
+// console.log(tooltips);
