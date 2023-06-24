@@ -7,7 +7,7 @@ import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initAnimaNumeros from "./modules/numeros.js";
-
+import initFuncionamento from "./modules/funcionamento.js";
 // modulo de  teste JavaScript
 // import initTeste from "./modules/teste.js";
 
@@ -21,3 +21,4 @@ initDropdownMenu();
 // initTeste();
 initMenuMobile();
 initAnimaNumeros();
+initFuncionamento();

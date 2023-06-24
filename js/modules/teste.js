@@ -103,3 +103,14 @@
 //   i = 0;
 //   // console.log("resetar");
 // }
+
+// FUNÇÃO TESTE CONVERTER HORAS
+// const agora = new Date();
+// const promocao = new Date("December 24 20218 23:59");
+// function converterDias(time) {
+//   return time / (24 * 60 * 60 * 1000);
+// }
+// const diasAgora = converterDias(agora);
+// const diaspromocao = converterDias(promocao);
+// const faltam = diaspromocao - diasAgora;
+// console.log(Math.floor(faltam));

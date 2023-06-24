@@ -194,6 +194,7 @@ body {
   font-weight: bold;
 }
 
+/* estilo responsivo */
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -226,6 +227,8 @@ body {
   }
 }
 
+/* animação via javaScript */
+
 .js [data-tab="content"] section {
   display: none;
 }
@@ -241,7 +244,7 @@ body {
 [data-tab="content"] section.ativo.show-down {
   animation: show-down 0.5s forwards;
 }
-
+/* animação gerais */
 @keyframes show-right {
   from {
     opacity: 0;
@@ -302,4 +305,20 @@ body {
 .js [data-anime="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+/* animação horário de funcionamento */
+[data-semana]::after {
+  display: inline-block;
+  content: " ";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 4px;
+  margin-bottom: 1px;
+  background: #e54;
+}
+
+[data-semana].aberto::after {
+  background: #48c774 !important;
 }
