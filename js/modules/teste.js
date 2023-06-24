@@ -1,6 +1,6 @@
-export default function initTeste() {
-  // console.log("Isso é teste");
-}
+// export default function initTeste() {
+//   // console.log("Isso é teste");
+// }
 
 // // // export function teste2() {
 // // //   console.log("Isso é teste skjdljks");
