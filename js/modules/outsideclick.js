@@ -7,7 +7,7 @@ export default function outsideClick(element, events, callback) {
   // veridicação para validar apenas um evento ao click no menu-dropdown
   if (!element.hasAttribute(outside)) {
     events.forEach((userEvent) => {
-      html.addEventListener(userEvent, handleOutsideClick);
+      setTimeout(() => html.addEventListener(userEvent, handleOutsideClick));
     });
     // atributo adicionado que mostra quantos cliques no elemento
     element.setAttribute(outside, "");

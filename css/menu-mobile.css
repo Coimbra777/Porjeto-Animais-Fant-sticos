@@ -31,10 +31,16 @@
     width: 12px;
     background: white;
     box-shadow: 0 4px #fff, 0 -4px #fff;
+    transition: transform 0.3s;
   }
+  /* AQUI ATIVA QUANDO ACIONA O EVENTO EM JAVASCRIPT */
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+
   /* ESTILO DA LISTA DO MENU */
   .js [data-menu="list"] {
-    display: block;
+    display: none;
     position: absolute;
     background: #fb5;
     width: 160px;
@@ -43,6 +49,12 @@
     top: 0;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
+  /* AQUI ATIVA QUANDO ACIONA O EVENTO EM JAVASCRIPT */
+  .js [data-menu="list"].active {
+    display: block;
+    animation: show-right 0.3s forwards;
+  }
+
   /* estilo do dropdrown em relação ao menu */
   .js .dropdown-menu {
     position: static;
