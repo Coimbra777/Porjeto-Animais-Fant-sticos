@@ -6,8 +6,8 @@ export default function initFuncionamento() {
   // TRANSFORMA O HORÁRIO EM ARRAY COM NÚMEROSDD
   const horarioSemana = funcionamento.dataset.horario.split(",").map(Number);
 
-  console.log(diaSemana);
-  console.log(horarioSemana);
+  // console.log(diaSemana);
+  // console.log(horarioSemana);
 
   // CONSTROI UMA DATA
   const dataAgora = new Date();
