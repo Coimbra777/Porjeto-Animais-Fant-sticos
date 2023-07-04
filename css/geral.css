@@ -322,3 +322,11 @@ body {
 [data-semana].aberto::after {
   background: #48c774 !important;
 }
+
+/* estilo span bitcoin  */
+.btc-preco {
+  background-color: #48c774;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+  border-radius: 2px;
+}

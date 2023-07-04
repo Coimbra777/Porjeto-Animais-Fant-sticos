@@ -8,6 +8,7 @@ import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetchanimais.js";
+import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
 // modulo de  teste JavaScript
 // import initTeste from "./modules/teste.js";
@@ -24,3 +25,4 @@ initMenuMobile();
 // initAnimaNumeros();
 initFuncionamento();
 initFetchAnimais();
+initFetchBitcoin();
