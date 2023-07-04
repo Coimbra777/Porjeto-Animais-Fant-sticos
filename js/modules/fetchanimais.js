@@ -1,4 +1,4 @@
-import initAnimaNumeros from "./numeros";
+import initAnimaNumeros from "./numeros.js";
 
 export default function initFetchAnimais() {
   async function fetchAnimais(url) {
@@ -6,13 +6,14 @@ export default function initFetchAnimais() {
     const animaisJSON = await animaisReponse.json();
 
     const numeroGrid = document.querySelector(".numeros-grid");
-    console.log(numeroGrid);
+    // console.log(numeroGrid);
 
     animaisJSON.forEach((animal) => {
       const divAnimal = createAnimal(animal);
-      console.log(divAnimal);
+      // console.log(divAnimal);
       numeroGrid.appendChild(divAnimal);
     });
+
     initAnimaNumeros();
   }
 
