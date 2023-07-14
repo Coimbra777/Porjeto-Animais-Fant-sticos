@@ -22,7 +22,6 @@ initTooltip();
 initDropdownMenu();
 // initTeste();
 initMenuMobile();
-// initAnimaNumeros();
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();

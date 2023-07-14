@@ -9,16 +9,16 @@ export default function initMenuMobile() {
 
   // FUNÇÃO PARA ABRIR E FECHAR MENU MOBILE
   // VERIFICAÇÃO PARA CASO NÃO EXISTA MENU
+  function openMenu() {
+    menuList.classList.add("active");
+    menuButton.classList.add("active");
+    outsideClick(menuList, eventos, () => {
+      // console.log("teste");
+      menuList.classList.remove("active");
+      menuButton.classList.remove("active");
+    });
+  }
   if (menuButton) {
-    function openMenu(event) {
-      menuList.classList.add("active");
-      menuButton.classList.add("active");
-      outsideClick(menuList, eventos, () => {
-        // console.log("teste");
-        menuList.classList.remove("active");
-        menuButton.classList.remove("active");
-      });
-    }
     eventos.forEach((evento) => menuButton.addEventListener(evento, openMenu));
   }
 }

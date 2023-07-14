@@ -8,7 +8,7 @@ tooltips.forEach((item) => {
 });
 
 // FUNÇÃO PARA ADICIONAR E REMOVER TOOLTIP EM RELAÇÃO À PÁGINA
-function onMouseOver(event) {
+function onMouseOver() {
   const tooltipBox = criarTooltipBox(this);
   // tooltipBox.style.top = e.pageY + "px";
   // tooltipBox.style.left = e.pageX + "px";
